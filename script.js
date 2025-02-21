@@ -1,13 +1,14 @@
 // Countdown Timer
 document.addEventListener("DOMContentLoaded", function() {
+    const launchDate = new Date("March 23, 2024 00:00:00").getTime();
+
     function updateCountdown() {
-        const launchDate = new Date("March 23, 2024 00:00:00").getTime();
         const now = new Date().getTime();
         const timeLeft = launchDate - now;
 
         if (timeLeft < 0) {
+            clearInterval(countdownInterval); // Stop the countdown when time is up
             document.getElementById("timer").innerHTML = "🚀 We're Live!";
-            clearInterval(countdownInterval);
             return;
         }
 
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    // Update countdown immediately and then every second
-    updateCountdown();
+    // Declare countdownInterval before using it
     const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Run the function once immediately
 });
