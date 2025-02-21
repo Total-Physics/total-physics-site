@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    // Declare countdownInterval AFTER the function is defined
-    updateCountdown(); // Run it immediately so the user sees the time right away
-    const countdownInterval = setInterval(updateCountdown, 1000);
+    // Fix: Declare countdownInterval AFTER function is defined
+    updateCountdown(); // Run it once immediately
+    let countdownInterval = setInterval(updateCountdown, 1000);
 });
