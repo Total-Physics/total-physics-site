@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const timeLeft = launchDate - now;
 
         if (timeLeft < 0) {
-            clearInterval(countdownInterval); // Stop the countdown when time is up
+            clearInterval(countdownInterval); // Stop the countdown when it reaches zero
             document.getElementById("timer").innerHTML = "🚀 We're Live!";
             return;
         }
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    // Declare countdownInterval before using it
+    // Declare countdownInterval AFTER the function is defined
+    updateCountdown(); // Run it immediately so the user sees the time right away
     const countdownInterval = setInterval(updateCountdown, 1000);
-    updateCountdown(); // Run the function once immediately
 });
