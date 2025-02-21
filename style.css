@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 header img {
@@ -10,7 +10,7 @@ header img {
 }
 
 h1, h2 {
-    color: cyan;
+    color: #00274D; /* Dark blue for a professional look */
 }
 
 ul {
@@ -27,4 +27,5 @@ li {
     font-size: 1.5em;
     font-weight: bold;
     color: red;
+    margin-top: 20px;
 }
