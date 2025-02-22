@@ -2,14 +2,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     const launchDate = new Date("March 23, 2024 00:00:00").getTime();
 
-    let countdownInterval; // Declare the variable properly
-
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = launchDate - now;
 
         if (timeLeft <= 0) {
-            clearInterval(countdownInterval); // Stop the timer when it reaches zero
+            clearInterval(countdownInterval); // Stop the countdown when time is up
             document.getElementById("timer").innerHTML = "🚀 We're Live!";
             return;
         }
@@ -22,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    // Fix: Ensure the interval is assigned AFTER function declaration
-    countdownInterval = setInterval(updateCountdown, 1000);
-    updateCountdown(); // Run it immediately to sh
+    // Fix: Declare countdownInterval AFTER function declaration
+    let countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Run it immediately so there's no delay
+});
