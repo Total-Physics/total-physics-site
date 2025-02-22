@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (timeLeft <= 0) {
             clearInterval(countdownInterval); // Stop the countdown when time is up
-            document.getElementById("timer").innerHTML = "🚀 We're Live!";
+            document.getElementById("timer").innerHTML = "🚀 We're going Live!";
             return;
         }
 
