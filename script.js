@@ -1,6 +1,6 @@
 // Countdown Timer
 document.addEventListener("DOMContentLoaded", function() {
-    const launchDate = new Date("March 23, 2024 00:00:00").getTime();
+    const launchDate = new Date("March 23, 2025 10:09:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (timeLeft <= 0) {
             clearInterval(countdownInterval); // Stop the countdown when time is up
-            document.getElementById("timer").innerHTML = "🚀 We're going Live!";
+            document.getElementById("timer").innerHTML = "🚀 We're coming Live!";
             return;
         }
 
