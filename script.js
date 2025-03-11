@@ -10,12 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const annouceLeft = announceDate - now;
 		
 
-        console.log(`Time Left: ${timeLeft}`); // Debugging: Check if countdown reaches zero
-
+        
         if (annouceLeft >= 0) {
             clearInterval(countdownInterval); // Stop the countdown when time is up
             document.getElementById("timer").innerHTML = "🚀 We're coming Live!";
-            console.log("🚀 Countdown Ended: Message Should Now Be Visible");
             return;
         }
 
