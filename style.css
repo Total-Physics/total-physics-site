@@ -1,16 +1,46 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: white;
-    color: black;
+    color: #222;
+    text-align: center;
+}
+
+header {
+    background-color: #00274D;
+    color: white;
+    padding: 20px;
 }
 
 header img {
-    margin-top: 20px;
+    margin: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 h1, h2 {
-    color: #00274D; /* Dark blue for a professional look */
+    color: #00274D;
+}
+
+section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
 ul {
@@ -20,23 +50,39 @@ ul {
 
 li {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
+footer {
+    background-color: #00274D;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Countdown Section */
 #countdown {
     font-size: 1.5em;
     font-weight: bold;
     color: red;
-    margin-top: -25px; /* Moves countdown higher */
-    position: relative;
+    margin-top: -10px;
 }
+
 .count-box {
     display: inline-block;
-    background-color: grey;
+    background-color: #444;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 8px 12px;
     margin: 5px;
     border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
 }
